@@ -1,0 +1,91 @@
+body{
+    font-style: Poppins, sans-serif;
+    margin: 0;
+    background-color: darkred;
+}
+#logo{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    margin-top: 20px;
+    text-align: center;
+}
+h3{
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    text-align: right;
+    justify-content: right;
+    color: rgb(204, 165, 24);
+}
+img{
+    height: 70%;
+    width: 70%;
+}
+#trailer{
+    display: flex;
+    padding-top: 30px;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+iframe{
+    border: 5px solid rgb(204, 165, 24);
+    
+}
+h1{
+    text-align: center;
+    background-color: black;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0;
+    color: rgb(204, 165, 24);
+    font-size: 60px;
+}
+#historia p{
+    padding: 30px;
+    margin-left: 6%;
+    margin-right: 6%;
+    text-align: center;
+    font-size: 28px;
+    color: black;
+    border: 5px solid black;
+    background-color: rgb(204, 165, 24);
+}
+table {
+    width: 88%; 
+    margin: 6%;
+    padding: 30px;
+    border-collapse: collapse;
+    background-color: rgb(204, 165, 24);
+    text-align: center;
+    border: 5px solid black;
+}
+
+th{
+    border: 2px solid black;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.images{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+}
+.images img{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    width: 30%;
+    border: 3px solid rgb(204, 165, 24);
+}
+
+
+
