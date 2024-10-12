@@ -203,3 +203,18 @@ table.polish-oscars-table {
     padding-top: 20px;
     margin-top: 10px;
 }
+#zegarek {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    font-size: 20px;
+    color: black;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 5px;  
+}
+#data {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
