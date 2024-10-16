@@ -23,15 +23,17 @@ function addChar(input, character) {
 }
 
 function openVotchcom() {
-    window.open("", "Display window", "toolbar=no,directories=no,menubar=no");
+    window.open("https://www.google.com/", "Display window", "toolbar=no,directories=no,menubar=no");
 }
 
-function clear(form) {
+function clearForm(form) {
     form.input.value = 0;
     form.display.value = 0;
     decimal = 0;
 }
 
-function changeBackground(hexNumber) {
-    document.bgColor = hexNumber;
+function changeBackground(rgbValue) {
+        document.body.style.backgroundImage = 'none'; 
+        document.body.style.backgroundColor = rgbValue;
+
 }

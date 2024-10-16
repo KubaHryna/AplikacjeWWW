@@ -5,14 +5,6 @@ body{
     background-attachment: fixed;
     background-position: center 100px;
 }
-button{
-    position: absolute;
-    color: black;
-    background-color: gold;
-    top: 10%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 a {
     text-decoration: none;
     color: inherit;
@@ -214,7 +206,64 @@ table.polish-oscars-table {
     border-radius: 5px;  
 }
 #data {
-    margin-top: 5px;
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    font-size: 20px;
+    color: black;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 5px;  
+}
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#buttons button {
+    
+    background-color: #ff4d4d; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
     font-size: 16px;
 }
+
+#buttons button:hover {
+    background-color: #e60000; 
+}
+
+#buttons form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#buttons input[type="text"], 
+#buttons select {
+    padding: 10px;
+    font-size: 16px;
+    width: 100px; 
+}
+
+#buttons select {
+    width: 150px;
+}
+
+form {
+    background-color: #ffcccc; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#buttons input[type="text"] {
+    text-align: center;
+}
+
+
 

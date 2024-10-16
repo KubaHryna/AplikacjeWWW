@@ -8,6 +8,7 @@
         <link rel="icon" href="Zdjęcia/Icon.ico" sizes="32x32" type="image/x-icon">
         <title>Filmy Oscarowe</title>
         <script src="timedate.js" type="text/javascript"></script>
+        <script src="information.js" type="text/javascript"></script>
         </head>
     <body onload="startclock()">
         <div id="zegarek"></div> 
@@ -16,8 +17,22 @@
             <h3>
               <a href="mailto:hrypa-jakub@wp.pl">Kontakt</a>  
             </h3>
+            <div id="buttons">
             <button onclick="showAlert()">Click Me!</button>
-
+            <button onclick="openVotchcom()">Otwórz Nowe Okno</button>
+            <button onclick="changeBackground('rgb(50, 50, 50)')">Zmień Tło na Ciemny Szary</button>
+            <form name="converter">
+                <input type="text" name="input" value="0" readonly>
+                <select name="measure1">
+                    <option value="1">Metry</option>
+                    <option value="0.001">Kilometry</option>
+                </select>
+                <button type="button" onclick="addChar(converter.input, '1')">Dodaj 1</button>
+                <button type="button" onclick="addChar(converter.input, '.')">Dodaj .</button>
+                <button type="button" onclick="clearForm(converter)">Wyczyść</button>
+            </form>
+        </div>
+        
     <script>
         function showAlert() {
             alert("Cześć Jestem Kuba, Witaj na mojej stronie!");
