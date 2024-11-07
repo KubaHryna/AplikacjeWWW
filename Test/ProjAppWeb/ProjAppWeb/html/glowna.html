@@ -1,0 +1,172 @@
+<div id="zegarek"></div> 
+        <section>
+            <h1>FILMY OSCAROWE</h1>
+            <h3>
+              <a href="mailto:hrypa-jakub@wp.pl">Kontakt</a>  
+            </h3>
+            <div id="buttons">
+            <button onclick="showAlert()">Click Me!</button>
+            <button onclick="openVotchcom()">Otwórz Nowe Okno</button>
+            <button onclick="changeBackground('rgb(50, 50, 50)')">Zmień Tło na Ciemny Szary</button>
+            <form name="converter">
+                <input type="text" name="input" value="0" readonly>
+                <select name="measure1">
+                    <option value="1">Metry</option>
+                    <option value="0.001">Kilometry</option>
+                </select>
+                <button type="button" onclick="addChar(converter.input, '1')">Dodaj 1</button>
+                <button type="button" onclick="addChar(converter.input, '.')">Dodaj .</button>
+                <button type="button" onclick="clearForm(converter)">Wyczyść</button>
+            </form>
+        </div>
+        
+    <script>
+        function showAlert() {
+            alert("Cześć Jestem Kuba, Witaj na mojej stronie!");
+        }
+    </script>
+    <div onload="startclock()">
+        <div id="zegarek"></div>
+            <div id="data"></div>
+    </div>
+        </section>
+        <section>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.php?idp=Titanic"><b>Titanic</b></a></li>
+                    <li><a href="index.php?idp=ForrestGump"><b>Forrest Gump</b></a></li>
+                    <li><a href="index.php?idp=Parasite"><b>Parasite</b></a></li>
+                    <li><a href="index.php?idp=Oppenheimer"><b>Oppenheimer</b></a></li>
+                    <li><a href="index.php?idp=Infiltracja"><b>Infiltracja</b></a></li>
+                    <li><a href="index.php?idp=Gale Oscarowe"><b>Gale Oscarowe</b></a></li>
+                   
+                </ul>
+
+            </nav>
+    
+        </section>
+        <div id="animacjaTestowa1" class="test-block">
+            Kliknij, a się powiększe
+        </div>
+        <script>
+            $("#animacjaTestowa1").on("click",function(){
+                $(this).animate({
+                    width: "500px",
+                    opacity: 0.4,
+                    fontsize: "3em",
+                    borderwidth:"10px"
+                }, 500);
+                });
+        </script>
+        <div id="animacjaTestowa2" class="test-block">
+            Najedź kursorem, a się powiększe
+        </div>
+        <script>
+        $("#animacjaTestowa2").on({
+            "mouseover" : function(){
+                $(this).animate({
+                    width:500
+                }, 800);
+            },
+            "mouseout" : function() {
+                $(this).animate({
+                    width:200
+                }, 800);
+            }
+        })
+        </script>
+        <div id="animacjaTestowa3" class="test-block2">
+            Klikaj, abym urósł
+        </div>
+        <script>
+            $("#animacjaTestowa3").on("click",function(){
+              if (!$(this).is(":animated")) {
+                $(this).animate({
+                    width: "+=" + 50,
+                    height: "+=" + 5,
+                    opacity: "+=" + 0.1,
+                    duration : 3000
+                });
+              }
+                });
+        </script>
+        
+        <section class="flex-container">
+            <div class="glass-container">
+                <h2>Historia Oscarów</h2>
+                <p>
+                    Oscar ma już 92 lata, choć oficjalnie nadano mu to imię dopiero w "wieku 10. lat". 
+                    Pierwsza ceremonia wręczenia nagród Amerykańskiej Akademii Sztuki i Wiedzy Filmowej odbyła się 16 maja 1929 roku. 
+                    Wtedy jeszcze te słynne statuetki nosiły jedynie nazwę "Academy Award of Merit" - czyli nagrody za zasługi. 
+                    Dopiero po dwu latach rozpowszechniło się określenie "Oscar", a po dziesięciu, w roku 1939, 
+                    nazwa ta została uznana za oficjalną. Tak 10-letnia nagroda Akademii została ochrzczona imieniem "Oscar".
+                </p>
+            </div>
+            <div class="glass-container2">
+                <h2>Polacy w Oscarach</h2>
+                <table class="polish-oscars-table">
+                    <tr>
+                        <th>Imię i Nazwisko</th>
+                        <th>Za co otrzymał Oscara?</th>
+                    </tr>
+                    <tr>
+                        <th>Maksymilian Faktorowicz</th>
+                        <th>Pierwszy w historii Oscar honorowy za stworzenie podkładu scenicznego, 
+                            dzięki któremu makijaże aktorów nie rozpuszczały się pod wpływem ciepła żarzących się na planie lamp</th>
+                    </tr>
+                    <tr>
+                        <th>Leopold Stokowski</th>
+                        <th>Honorowy Oskar za muzykę do filmu animowanego "Fantazja" Walta Disneya i za wkład w realizację pełnometrażowego filmu animowanego.</th>
+                    </tr>
+                    <tr>
+                        <th>Bronisław Kaper</th>
+                        <th> Oskar za muzykę do filmu "Lili" Charlesa Waltersa </th>
+                    </tr>
+                    <tr>
+                        <th>Stefan Kudelski</th>
+                        <th>Nagroda za rozwój techniki nagrywania dźwięku, oraz nagroda Gordona E. Sawyera za osiągnięcia w dziedzinie rejestracji dźwięku </th>
+                    </tr>
+                    <tr>
+                        <th>Zbigniew Rybczyński</th>
+                        <th>Oskar za krótkometrażowy film animowany "Tango"</th>
+                    </tr>
+                    <tr>
+                        <th>Janusz Kamiński</th>
+                        <th>Oskar za zdjęcia do filmu "Lista Schindlera" w reż. Stevena Spielberga,oraz nagroda za zdjęcia do filmu "Szeregowiec Ryan" w reż. Stevena Spielberga</th>
+                    </tr>
+                    <tr>
+                        <th>Allan Starski i Ewa Braun</th>
+                        <th>Oskar za scenografię i dekorację wnętrz do filmu "Lista Schindlera" w reż. Stevena Spielberga </th>
+                    </tr>
+                    <tr>
+                        <th>Andrzej Wajda</th>
+                        <th>Honorowy Oskar za całokształt twórczości</th>
+                    </tr>
+                    <tr>
+                        <th>Roman Polański</th>
+                        <th>Oskar za reżyserię filmu "Pianista"</th>
+                    </tr>
+                    <tr>
+                        <th>Jan A.P. Kaczmarek</th>
+                        <th>Uhonorowany Oskarem za muzykę do filmu "Marzyciel" w reż. Marca Forstera </th>
+                    </tr>
+                    <tr>
+                        <th>"Piotruś i Wilk" </th>
+                        <th>Oskar w kategorii krótkometrażowy film animowany</th>
+                    </tr>
+                    <tr>
+                        <th>"Ida"</th>
+                        <th>Oskar w kategorii najlepszy film nieanglojęzyczny</th>
+                    </tr>
+
+                </table>
+            </div>
+        </section>
+        
+        
+
+<?php
+ $nr_indeksu = '169245';
+ $nrGrupy = 'ISI2';
+ echo 'Autor: Jakub Hryniewicz '.$nr_indeksu.' grupa '.$nrGrupy.' <br /><br />';
+?> 
