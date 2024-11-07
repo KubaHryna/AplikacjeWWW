@@ -37,3 +37,6 @@ function showtime()
     timerID = setTimeout("showtime()", 1000);
     timerRunning = true;
 }
+window.onload = function(){
+    startclock();
+};
