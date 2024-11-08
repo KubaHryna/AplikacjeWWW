@@ -1,5 +1,7 @@
 <?php
-$color = 'red';
-$fruit = 'apple';
+	
+	$kolor='czerwone';
+	$owoc='jabłko';
 
 ?>
+	
