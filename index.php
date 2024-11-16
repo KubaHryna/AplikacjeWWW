@@ -15,14 +15,12 @@ include("cfg.php");
 <body>
     <div class="wrapper">
         <?php
-           
-            if (isset($_GET['idp'])) {
-                
-                include("showpage.php");
-            } else {
-                
-                include('html/glowna.html');
-            }
+        include("showpage.php");
+        if (isset($_GET['idp'])) {
+            PokazPodstrone($_GET['idp']);
+        } else {
+            PokazPodstrone('HomePage'); // Wyświetl stronę główną
+        }
         ?>
     </div>
 </body>

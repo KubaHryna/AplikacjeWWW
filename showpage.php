@@ -1,5 +1,5 @@
 <?php
-include("cfg.php"); 
+include_once("cfg.php"); 
 
 function PokazPodstrone($pageTitle) {
     global $link; 
@@ -19,10 +19,4 @@ function PokazPodstrone($pageTitle) {
     $result->free();
 }
 
-if (isset($_GET['idp'])) {
-    $pageTitle = $_GET['idp'];
-    PokazPodstrone($pageTitle);
-} else {
-    echo "<p>Strona główna - brak wybranej podstrony.</p>";
-}
 ?>
