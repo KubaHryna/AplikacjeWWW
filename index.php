@@ -19,7 +19,7 @@ include("cfg.php");
         if (isset($_GET['idp'])) {
             PokazPodstrone($_GET['idp']);
         } else {
-            PokazPodstrone('HomePage'); // Wyświetl stronę główną
+            PokazPodstrone('HomePage'); 
         }
         ?>
     </div>

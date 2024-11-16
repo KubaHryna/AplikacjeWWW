@@ -3,6 +3,8 @@
     $dbuser = 'root' ;
     $dbpass = '';
     $baza = 'moja_strona';
+    $login = "admin";
+    $pass = "admin";
 
     $link = new mysqli($dbhost,$dbuser,$dbpass, $baza);
 
