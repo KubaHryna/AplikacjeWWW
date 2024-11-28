@@ -1,7 +1,14 @@
 <?php
+// Rozpoczynamy sesję
 session_start();
+
+// Dołączamy plik konfiguracyjny
 include('../cfg.php');
 
+/**
+ * Funkcja wyświetlająca formularz logowania.
+ * Używana, gdy użytkownik nie jest zalogowany.
+ */
 function FormularzLogowania() {
     $form = '
     <div class="login-form">
@@ -22,11 +29,18 @@ function FormularzLogowania() {
     return $form;
 }
 
+/**
+ * Funkcja generująca listę dostępnych podstron.
+ * Pobiera dane z bazy danych i wyświetla je w tabeli.
+ */
 function ListaPodstron() {
     global $link;
+    
+    // Zapytanie do bazy danych w celu pobrania listy podstron
     $query = "SELECT * FROM page_list";
     $result = $link->query($query);
     
+    // Zaczynamy tworzenie tabeli
     $output = '<div class="admin-list">
         <h2>Lista podstron</h2>
         <table border="1">
@@ -36,6 +50,7 @@ function ListaPodstron() {
                 <th>Akcje</th>
             </tr>';
     
+    // Wyświetlanie wyników zapytania w tabeli
     while($row = $result->fetch_assoc()) {
         $output .= '<tr>
             <td>'.$row['id'].'</td>
@@ -54,6 +69,10 @@ function ListaPodstron() {
     return $output;
 }
 
+/**
+ * Funkcja do edytowania podstrony.
+ * Jeżeli podano ID, wczytuje dane z bazy danych i umożliwia edycję.
+ */
 function EdytujPodstrone($id = null) {
     global $link;
     
@@ -61,6 +80,7 @@ function EdytujPodstrone($id = null) {
     $content = '';
     $status = 1;
     
+    // Jeśli przekazano ID, pobieramy dane z bazy
     if($id) {
         $query = "SELECT * FROM page_list WHERE id = ?";
         $stmt = $link->prepare($query);
@@ -74,6 +94,7 @@ function EdytujPodstrone($id = null) {
         }
     }
     
+    // Generowanie formularza edycji lub dodawania
     $form = '
     <div class="edit-form">
         <h2>'.($id ? 'Edytuj' : 'Dodaj').' podstronę</h2>
@@ -100,6 +121,10 @@ function EdytujPodstrone($id = null) {
     return $form;
 }
 
+/**
+ * Funkcja do dodawania nowej podstrony do bazy danych.
+ * Zwraca komunikat o powodzeniu lub błędzie.
+ */
 function DodajNowaPodstrone() {
     global $link;
 
@@ -108,10 +133,12 @@ function DodajNowaPodstrone() {
         $content = $_POST['page_content'];
         $status = isset($_POST['status']) ? 1 : 0;
 
+        // Zapytanie SQL do wstawienia danych
         $query = "INSERT INTO page_list (page_title, page_content, status) VALUES (?, ?, ?)";
         $stmt = $link->prepare($query);
         $stmt->bind_param('ssi', $title, $content, $status);
 
+        // Wykonanie zapytania i zwrócenie odpowiedniego komunikatu
         if ($stmt->execute()) {
             return "Dodano nową podstronę.";
         } else {
@@ -122,15 +149,19 @@ function DodajNowaPodstrone() {
     return EdytujPodstrone();
 }
 
-     
-
+/**
+ * Funkcja do usuwania podstrony.
+ * Usuwa wybraną podstronę z bazy danych na podstawie ID.
+ */
 function UsunPodstrone($id) {
     global $link;
     
+    // Zapytanie SQL do usunięcia podstrony
     $query = "DELETE FROM page_list WHERE id = ?";
     $stmt = $link->prepare($query);
     $stmt->bind_param('i', $id);
     
+    // Wykonanie zapytania i zwrócenie komunikatu
     if($stmt->execute()) {
         return "Podstrona została usunięta.";
     } else {
@@ -138,18 +169,21 @@ function UsunPodstrone($id) {
     }
 }
 
+// Zmienna przechowująca komunikat dla użytkownika
 $message = '';
 
+// Obsługa logowania
 if(isset($_POST['logowanie'])) {
     if($_POST['login'] === $login && $_POST['pass'] === $pass) {
-        $_SESSION['logged_in'] = true;
+        $_SESSION['logged_in'] = true; // Ustalamy sesję, jeśli login i hasło są poprawne
     } else {
-        $message = "Błędny login lub hasło!";
+        $message = "Błędny login lub hasło!"; // Komunikat w przypadku błędnych danych
     }
 }
 
+// Obsługa wylogowywania
 if(isset($_GET['action']) && $_GET['action'] === 'logout') {
-    session_destroy();
+    session_destroy(); // Niszczenie sesji
     header('Location: admin.php');
     exit();
 }
@@ -160,6 +194,7 @@ if(isset($_GET['action']) && $_GET['action'] === 'logout') {
 <head>
     <title>Panel administracyjny</title>
     <style>
+        /* Style formularzy, tabel i innych elementów */
         .login-form, .admin-list, .edit-form { 
             max-width: 800px; 
             margin: 20px auto; 
@@ -195,20 +230,23 @@ if(isset($_GET['action']) && $_GET['action'] === 'logout') {
 </head>
 <body>
     <?php
+    // Wyświetlanie komunikatu o błędzie logowania, jeśli istnieje
     if(!empty($message)) {
         echo '<div class="message">'.$message.'</div>';
     }
 
+    // Sprawdzenie, czy użytkownik jest zalogowany
     if(!isset($_SESSION['logged_in'])) {
-        echo FormularzLogowania();
+        echo FormularzLogowania(); // Jeśli nie jest zalogowany, wyświetlamy formularz logowania
     } else {
         echo '<div style="text-align: right;"><a href="admin.php?action=logout">Wyloguj</a></div>';
         
+        // Sprawdzanie akcji do wykonania
         if(isset($_GET['action'])) {
             switch($_GET['action']) {
                 case 'edytuj':
                     if(isset($_POST['edytuj'])) {
-                    
+                        // Obsługa zapisu zmian w podstronie
                         $id = $_POST['id'];
                         $title = $_POST['page_title'];
                         $content = $_POST['page_content'];
@@ -238,7 +276,7 @@ if(isset($_GET['action']) && $_GET['action'] === 'logout') {
                     echo ListaPodstron();
             }
         } else {
-            echo ListaPodstron();
+            echo ListaPodstron(); // Domyślna lista podstron
         }
     }
     ?>

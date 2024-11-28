@@ -1,21 +1,28 @@
+/* =============================== USTAWIENIA OGÓLNE =============================== */
 .wrapper{
     font-family: Arial;
     margin: 0;
     background-color: rgb(192, 192, 192);
 }
+
+/* =============================== STYLIZACJA LOGO =============================== */
 #logo{
     display: flex;
     justify-content: center;
     background-color: black;
 }
+
 #logo h1{
     color: rgb(70, 130, 180);
     font-size: 90px;
 }
+
 #a2 {
     text-decoration: none;
     color: inherit;
 }
+
+/* =============================== STYLIZACJA NAGŁÓWKA I TEKSTÓW =============================== */
 h3{
     position: absolute;
     top: 25px;
@@ -23,26 +30,30 @@ h3{
     text-align: right;
     justify-content: right;
     color: rgb(70, 130, 180);
-    
 }
 
 a{
     text-decoration: none;
 }
+
 img{
     height: 35%;
     width: 35%;
 }
+
+/* =============================== STYLIZACJA TRAILERA =============================== */
 #trailer{
     display: flex;
     padding-top: 30px;
     justify-content: center;
     padding-bottom: 30px;
 }
+
 iframe{
     border: 5px solid rgb(70, 130, 180);
-    
 }
+
+/* =============================== STYLIZACJA NAGŁÓWKÓW =============================== */
 h1{
     text-align: center;
     background-color: black;
@@ -52,6 +63,8 @@ h1{
     color: rgb(70, 130, 180);
     font-size: 60px;
 }
+
+/* =============================== STYLIZACJA HISTORII =============================== */
 #historia p{
     font-family: Poppins,sans-serif;
     padding: 30px;
@@ -63,6 +76,8 @@ h1{
     border: 5px solid black;
     background-color: rgb(70, 130, 180);
 }
+
+/* =============================== STYLIZACJA TABELI =============================== */
 table {
     font-family: Poppins,sans-serif;
     width: 88%; 
@@ -80,13 +95,15 @@ th{
     font-size: 18px;
     font-weight: 500;
 }
+
+/* =============================== STYLIZACJA OBRAZÓW =============================== */
 .images{
     display: flex;
     justify-content: space-around;
     padding-top: 30px;
     padding-bottom: 30px;
-    
 }
+
 .images img{
     display:flex;
     flex-direction: row;
@@ -95,7 +112,3 @@ th{
     width: 30%;
     border: 3px solid rgb(70, 130, 180);
 }
-
-
-
-

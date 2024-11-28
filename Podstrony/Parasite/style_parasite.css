@@ -1,18 +1,23 @@
+/* =============================== USTAWIENIA OGÓLNE =============================== */
 body{
     font-family: 'Parasite', sans-serif;                                   
     margin: 0;
     background-color:darkgrey;
 }
+
+/* =============================== STYLIZACJA LOGO =============================== */
 #logo{
     display: flex;
     justify-content: center;
     background-color: black;
-    
 }
+
 #a2 {
     text-decoration: none;
     color: inherit;
 }
+
+/* =============================== STYLIZACJA NAGŁÓWKA I TEKSTÓW =============================== */
 h3{
     position: absolute;
     top: 25px;
@@ -20,27 +25,32 @@ h3{
     text-align: right;
     justify-content: right;
     color: white;
-    
 }
+
 a{
     text-align: center;
 }
+
 img{
     justify-content: center;
     margin-bottom: 40px;
     height: 70%;
     width: 70%;
 }
+
+/* =============================== STYLIZACJA TRAILERA =============================== */
 #trailer{
     display: flex;
     padding-top: 30px;
     justify-content: center;
     padding-bottom: 30px;
 }
+
 iframe{
     border: 5px solid black;
-    
 }
+
+/* =============================== STYLIZACJA NAGŁÓWKÓW =============================== */
 h1{
     text-align: center;
     background-color: black;
@@ -50,6 +60,8 @@ h1{
     color: white;
     font-size: 60px;
 }
+
+/* =============================== STYLIZACJA HISTORII =============================== */
 #historia p{
     padding: 30px;
     margin-left: 6%;
@@ -61,6 +73,8 @@ h1{
     border: 5px solid black;
     background-color: whitesmoke;
 }
+
+/* =============================== STYLIZACJA TABELI =============================== */
 table {
     width: 88%; 
     margin: 6%;
@@ -77,13 +91,15 @@ th{
     font-size: 18px;
     font-weight: 500;
 }
+
+/* =============================== STYLIZACJA OBRAZÓW =============================== */
 .images{
     display: flex;
     justify-content: space-around;
     padding-top: 30px;
     padding-bottom: 30px;
-    
 }
+
 .images img{
     display:flex;
     flex-direction: row;
@@ -92,6 +108,3 @@ th{
     width: 30%;
     border: 3px solid black;
 }
-
-
-

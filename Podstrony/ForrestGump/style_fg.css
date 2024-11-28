@@ -1,8 +1,11 @@
+/* =============================== USTAWIENIA OGÓLNE =============================== */
 .wrapper{
     font-family: Arial;
     margin: 0;
     background-color: rgb(192, 192, 192);
 }
+
+/* =============================== STYLIZACJA LOGO =============================== */
 #logo{
     display: flex;
     justify-content: center;
@@ -10,10 +13,12 @@
     padding-bottom: 30px;
     padding-top: 10px;
 }
+
 a {
     text-decoration: none;
     color: inherit;
 }
+
 h3{
     position: absolute;
     top: 25px;
@@ -22,21 +27,25 @@ h3{
     justify-content: right;
     color: rgb(7, 84, 166);
 }
+
 img{
     height: 110%;
     width: 110%;
- 
 }
+
+/* =============================== STYLIZACJA TRAILERA =============================== */
 #trailer{
     display: flex;
     padding-top: 30px;
     justify-content: center;
     padding-bottom: 30px;
 }
+
 iframe{
     border: 5px solid rgb(7, 84, 166);
-    
 }
+
+/* =============================== STYLIZACJA NAGŁÓWKÓW =============================== */
 h1{
     text-align: center;
     background-color: black;
@@ -46,6 +55,8 @@ h1{
     color: rgb(7, 84, 166);
     font-size: 60px;
 }
+
+/* =============================== STYLIZACJA HISTORII =============================== */
 #historia p{
     padding: 30px;
     margin-left: 6%;
@@ -56,8 +67,10 @@ h1{
     border: 5px solid black;
     background-color: rgb(7, 84, 166);
 }
+
+/* =============================== STYLIZACJA TABELI =============================== */
 table {
-    width: 88%; 
+    width: 88%;
     margin: 6%;
     padding: 30px;
     border-collapse: collapse;
@@ -72,13 +85,15 @@ th{
     font-size: 18px;
     font-weight: 500;
 }
+
+/* =============================== STYLIZACJA OBRAZÓW =============================== */
 .images{
     display: flex;
     justify-content: space-around;
     padding-top: 30px;
     padding-bottom: 30px;
-    
 }
+
 .images img{
     display:flex;
     flex-direction: row;
@@ -87,6 +102,3 @@ th{
     width: 30%;
     border: 3px solid rgb(7, 84, 166);
 }
-
-
-

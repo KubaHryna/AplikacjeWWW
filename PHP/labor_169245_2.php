@@ -34,7 +34,8 @@
 	
 	$imie='Gonzalez';
 	
-	switch($imie){
+	switch($imie)
+	{
 		case 'Wiktor' :
 			echo 'Cześć Wiktor !<br/>';
 			break;
@@ -52,13 +53,15 @@
 
 echo 'Zastosowanie pętli while: ';	
 	$i = 1;
-while ($i <= 10) {
+while ($i <= 10) 
+{
     echo $i++ . ' ';  
 }
 echo '<br/>';
 
 echo 'Zastosowanie pętli for: ';
-for ($x = 1; $x <= 10; $x++) {
+for ($x = 1; $x <= 10; $x++) 
+{
     echo $x . ' ';
 }
 echo '<br/>';
