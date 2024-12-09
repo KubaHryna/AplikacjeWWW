@@ -1,0 +1,352 @@
+body{
+    background-color: darkgray;
+    background-image: url(Zdjęcia/oscars.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center 100px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+h2{
+    text-align: center;
+    display: block;
+    font-family: bebas neue;
+    font-size: 56px;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, #FFD700, #FFC700, #FFAA00, #FF8800, 
+    #FF6600, #FF3300, #FF0000, #CC3333, #999999, #CCCCCC, #DDDDDD, #F0F0F0);
+        background-size: 400% 400%;
+        animation: animate 15s ease infinite;
+    padding: 10px;
+    margin: 0%;
+    border: 0%;
+}
+h3{
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    text-align: right;
+    justify-content: right;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, #FFD700, #FFC700, #FFAA00, #FF8800, 
+    #FF6600, #FF3300, #FF0000, #CC3333, #999999, #CCCCCC, #DDDDDD, #F0F0F0);
+        background-size: 400% 400%;
+        animation: animate 15s ease infinite;
+}
+h1{
+    text-align: center;
+    display: block;
+    font-family: bebas neue;
+    font-size: 56px;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, #FFD700, #FFC700, #FFAA00, #FF8800, 
+    #FF6600, #FF3300, #FF0000, #CC3333, #999999, #CCCCCC, #DDDDDD, #F0F0F0);
+        background-size: 400% 400%;
+        animation: animate 15s ease infinite;
+    padding: 10px;
+    margin: 0%;
+    border: 0%;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    25%{
+        background-position: 100% 0;
+    }
+    50%{
+        background-position: 100% 100%;
+    }
+    75%{
+        background-position: 0 100%;
+    }
+    100%{
+        background-position: 0 0;
+    }
+
+}
+.navbar{
+    height: 120px;
+}
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+    padding: auto;
+    margin: auto;
+    text-align: center;
+    padding-left: 100px;
+}
+.navbar a{
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, #FFFF00, #FFEE00, #FFDD00, #FFCC00, #FFBB00,
+     #FFAA00, #FF8800, #FF6600, #FF4400, #FF2200, #FF1100, #FF0000 );
+        background-size: 400% 400%;
+        animation: animate 20s ease infinite;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.navbar a:hover{
+    color: black;
+    background-image: none;
+    background-clip: border-box;
+    background-color: #FFD700;
+    border-radius: 100%;
+    width: 120px;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar li{
+    display: flex;
+    text-align: center;
+    font-size: 24px;
+    padding: auto;
+    margin: auto;
+}
+.navbar{
+    padding: 15px;
+    margin: 10px;
+    padding-left: 0px;
+
+}
+.flex-container {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    margin: 0 auto; 
+    gap: 140px; 
+}
+
+.glass-container{
+    height: 520px;
+    width: 350px;
+    padding: 30px 50px;
+    border-radius: 50px;
+
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1), rgba(255,255,255, 0),);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255, 0.18),;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.089);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-family: Poppins, sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 185%;
+    margin-left: 10%;
+    margin-top: 2%;
+    color: whitesmoke;
+
+}
+.glass-container2 { 
+    height: 520px;
+    width: 350px;
+    padding: 30px 50px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgba(255,255,255, 0.1), rgba(255,255,255, 0));
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255, 0.18);
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.089);
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    text-align: justify;
+    line-height: 185%;
+    margin-left: 10%;
+    margin-top: 2%;
+    color: whitesmoke;
+    overflow-y: auto; 
+    text-align: center;
+}
+
+table.polish-oscars-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.polish-oscars-table th, .polish-oscars-table td {
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.polish-oscars-table th {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.polish-oscars-table td {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: whitesmoke;
+}
+
+.polish-oscars-table tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+#footer{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    margin-top: 10px;
+}
+#zegarek {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    font-size: 20px;
+    color: black;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 5px;  
+}
+#data {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    font-size: 20px;
+    color: black;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-radius: 5px;  
+}
+#buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#buttons button {
+    
+    background-color: #ff4d4d; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#buttons button:hover {
+    background-color: #e60000; 
+}
+
+#buttons form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#buttons input[type="text"], 
+#buttons select {
+    padding: 10px;
+    font-size: 16px;
+    width: 100px; 
+}
+
+#buttons select {
+    width: 150px;
+}
+
+form {
+    background-color: #ffcccc; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#buttons input[type="text"] {
+    text-align: center;
+}
+.test-block{
+    width: 200px;
+    border: 2px solid rgb(139,0,0);
+    background: rgb(255,99,71);
+    text-align: center;
+    color: #000;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: 40%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.test-block2{
+    width: 200px;
+    border: 2px solid rgb(139,0,0);
+    background: rgb(255,99,71);
+    text-align: center;
+    color: #000;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.categories {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.categories form {
+    margin-bottom: 20px; 
+}
+
+#cm {
+    position: absolute;
+    top: 1800px;
+    left: 100px;
+    text-align: left;
+    justify-content: left;
+    text-align: left; 
+    font-size: 1.2em; 
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(45deg, #FFD700, #FFC700, #FFAA00, #FF8800, 
+    #FF6600, #FF3300, #FF0000, #CC3333, #999999, #CCCCCC, #DDDDDD, #F0F0F0);
+        background-size: 400% 400%;
+        animation: animate 15s ease infinite;
+}
+
+
+
+

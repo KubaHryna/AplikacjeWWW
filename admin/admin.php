@@ -3,7 +3,7 @@
 session_start();
 
 // Dołączamy plik konfiguracyjny
-include('../cfg.php');
+include('cfg.php');
 
 /**
  * Funkcja wyświetlająca formularz logowania.
