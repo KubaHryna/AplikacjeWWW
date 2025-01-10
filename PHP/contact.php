@@ -134,6 +134,6 @@ else
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="contact.css">
+    <link rel="stylesheet" type="text/css" href="../contact.css">
 </head>
 </html>

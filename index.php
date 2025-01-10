@@ -2,9 +2,9 @@
 // *********************************************
 // Załączenie pliku konfiguracyjnego
 // *********************************************
-include("cfg.php");
+include("PHP/cfg.php");
 // KATEGORIE - Załączenie klasy zarządzania kategoriami
-include("category_manager.php");
+include("PHP/category_manager.php");
  $categoryManager = new CategoryManager(); // Tworzenie obiektu klasy
 ?>
 <!DOCTYPE html>
@@ -16,9 +16,9 @@ include("category_manager.php");
     <base href="/moj_projekt/"> <!-- Baza adresów dla zasobów -->
     <link rel="stylesheet" href="style_main.css"> <!-- Łączenie pliku CSS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- Załączenie jQuery -->
-    <link rel="icon" href="Zdjęcia/Icon.ico" sizes="32x32" type="image/x-icon"> <!-- Ikona strony -->
+    <link rel="icon" href="http://localhost/moj_projekt/Zdjęcia/Icon.ico" sizes="32x32" type="image/x-icon"> <!-- Ikona strony -->
     <title>Filmy Oscarowe</title> <!-- Tytuł strony -->
-
+    
     <!-- *********************************************
          Łączenie dodatkowych skryptów JavaScript
          ********************************************* -->
@@ -32,7 +32,7 @@ include("category_manager.php");
     <div class="wrapper">
         <?php
         // Załączenie pliku obsługującego podstrony
-        include("showpage.php");
+        include("PHP/showpage.php");
 
         // *********************************************
         // Wyświetlanie odpowiedniej podstrony
@@ -47,7 +47,7 @@ include("category_manager.php");
         ?>
     </div>
      <!--KATEGORIE - Formularz zarządzania kategoriami -->
-    <div class="categories">
+    
             <h2>Zarządzanie kategoriami</h2>
 
             <!-- Formularz dodawania kategorii -->
@@ -77,9 +77,12 @@ include("category_manager.php");
             </form>
 
             <!-- Wyświetlanie drzewa kategorii -->
-            <h3 id = "cm">Aktualne kategorie</h3>
+            <h2>Aktualne kategorie</h2>
+            <div id= "xcontent">
             <?php $categoryManager->PokazKategorie(); ?>
-        </div>
+            </div>
+            
+        
         
 
         <?php
@@ -96,6 +99,12 @@ include("category_manager.php");
             }
         }
         ?>
+    </div>
+    <div class="centered-container">
+        <h4>
+            <a href="PHP/show_products.php" class="shop-button">Zarządzaj produktami</a>
+            <a href="PHP/add_product.php" class="shop-button">Dodaj produkt</a>
+        </h4>
     </div>
 </body>
 </html>

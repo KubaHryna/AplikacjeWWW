@@ -12,6 +12,18 @@ class CategoryManager {
     }
 
     public function DodajKategorie($nazwa, $matka = 0) {
+        $stmt = $this->db->prepare("SELECT COUNT(*) FROM categories WHERE nazwa = ? AND matka = ?");
+        $stmt->bind_param("si", $nazwa, $matka);
+        $stmt->execute();
+        $stmt->bind_result($liczba);
+        $stmt->fetch();
+        $stmt->close();
+    
+        if ($liczba > 0) {
+            echo "Kategoria o nazwie '$nazwa' już istnieje dla rodzica o ID $matka.";
+            return;
+        }
+    
         $stmt = $this->db->prepare("INSERT INTO categories (nazwa, matka) VALUES (?, ?)");
         $stmt->bind_param("si", $nazwa, $matka);
         $stmt->execute();
@@ -51,7 +63,7 @@ class CategoryManager {
         if (!isset($drzewo[$matka])) return;
 
         foreach ($drzewo[$matka] as $kategoria) {
-            echo str_repeat("--", $poziom) . " " . $kategoria['nazwa'] . "<br>";
+            echo "<span style='color: white;'>" . str_repeat("--", $poziom) . " " . htmlspecialchars($kategoria['nazwa']) . "</span><br>";
             $this->wyswietlKategorie($kategoria['id'], $drzewo, $poziom + 1);
         }
     }
