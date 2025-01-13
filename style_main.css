@@ -10,12 +10,10 @@ a {
     color: inherit;
 }
 h2{
-    text-align: center;
     display: block;
     text-align: center;
-    word-spacing: 10px;
     font-family: bebas neue;
-    font-size: 56px;
+    font-size: 40px;
     background-clip: text;
     color: transparent;
     background-image: linear-gradient(45deg, #FFD700, #FFC700, #FFAA00, #FF8800, 
@@ -24,7 +22,6 @@ h2{
         animation: animate 15s ease infinite;
     padding: 10px;
     margin: 0%;
-    border: 0%;
 }
 h3{
     position: absolute;
@@ -322,26 +319,6 @@ form {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-.categories {
-    display: flex;
-    flex-direction: column; 
-    gap: 10px; 
-}
-
-.categories form {
-    margin-bottom: 20px; 
-}
-
-#xcontent {
-    margin-top: 60px;
-    margin-bottom: 30px;
-    display: flex; 
-    flex-direction: column;               
-    justify-content: center;      
-    align-items: center;          
-    height: 10px;               
-    text-align: center;          
 }
 .centered-container h4{
     position: block;

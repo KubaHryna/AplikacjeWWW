@@ -24,9 +24,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="pl">
+<style>
+        body { font-family: Arial, sans-serif; margin: 20px; background-color: #333; }
+        .wrapper { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            padding: 20px;
+            background-color: #444;
+            border-radius: 5px;
+            color: white;
+        }
+        h2 { text-align: center; }
+        input[type="text"], input[type="number"], textarea, select {
+            width: 100%; 
+            padding: 10px; 
+            margin: 10px 0;
+            border-radius: 4px; 
+            border: 1px solid #666;
+            background-color: #555;
+            color: white;
+        }
+        textarea { min-height: 100px; }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
+        button:hover { background-color: #45a049; }
+        input[type="file"] { 
+            margin: 10px 0;
+        }
+        label {
+            font-weight: bold;
+        }
+        .message { color: #ffd700; margin: 10px 0; text-align: center; }
+    </style>
 <head>
     <base href="/moj_projekt/"> <!-- Baza adresów dla zasobów -->
-    <link rel="stylesheet" href="style_main.css"> <!-- Łączenie pliku CSS -->
     <title>Dodaj produkt</title> <!-- Tytuł strony -->
 </head>
 <body>
