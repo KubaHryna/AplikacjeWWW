@@ -1,3 +1,9 @@
+body {
+    background-color: #f7f9fc; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
 .product-container {
     display: flex;
     flex-wrap: wrap;
@@ -31,3 +37,28 @@
 .product-card p:first-child {
     font-weight: bold;
 }
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.cart-link {
+    position: fixed;
+    top: 10px; 
+    right: 10px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.cart-icon {
+    width: 80px;
+    height: 80px; 
+    border-radius: 50%; 
+    transition: transform 0.2s ease; 
+}
+.cart-link:hover .cart-icon {
+    transform: scale(1.2); 
+}
+

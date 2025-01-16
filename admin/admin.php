@@ -259,6 +259,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </style>
 </head>
 <body>
+<a href="../index.php" style="position: absolute; top: 20px; right: 20px; background-color: #4CAF50; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-size: 16px; cursor: pointer;">
+    Powrót
+</a>
     <?php if (!empty($message)) { echo '<div class="message">' . htmlspecialchars($message) . '</div>'; } ?>
 
     <?php if (!isset($_SESSION['logged_in'])): ?>
@@ -308,7 +311,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div style="text-align: center; margin: 20px;">
             <a href="../PHP/show_products.php" class="shop-button">Przeglądaj produkty</a>
-            <a href="../PHP/add_product.php" class="shop-button">Dodaj produkt</a>
+            <a href="../PHP/manage_product.php" class="shop-button">Zarządzaj produktami</a>
         </div>
     <?php endif; ?>
 </body>
