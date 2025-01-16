@@ -259,7 +259,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </style>
 </head>
 <body>
-<a href="../index.php" style="position: absolute; top: 20px; right: 20px; background-color: #4CAF50; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-size: 16px; cursor: pointer;">
+<a href="../index.php" style="position: absolute; top: 20px; left: 20px; background-color: #4CAF50; color: white; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-size: 16px; cursor: pointer;">
     Powrót
 </a>
     <?php if (!empty($message)) { echo '<div class="message">' . htmlspecialchars($message) . '</div>'; } ?>
