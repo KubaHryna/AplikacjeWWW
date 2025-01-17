@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 // Pobranie szczegółów produktu
 $id = intval($_GET['id']);
-$produkt = $productManager->PobierzProdukty()->fetch_assoc();
+$produkt = $productManager->PobierzProduktPoId($id);
 
 ?>
 
